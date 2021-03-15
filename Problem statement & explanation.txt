@@ -1,0 +1,49 @@
+PROBLEM STATEMENT:
+
+A famous chain of Paratha selling stalls called "Paratha Stalls" is very famous for
+various types of parathas that they offer.
+It has two different paratha stalls, one in Punjab and other in Delhi, named as 
+"Punjabi Paratha Stall" and "Delhi Paratha Stall" respectively, where the 
+parathas of Punjab style and Mumbai style are sent from the "Paratha Stalls".
+But it is becoming very costly for the owner to deliver these different types of parathas
+to the two cities.
+So, with the help of Factory Method Pattern, we will be solving this issue, such that
+the two other extended stalls can provide their customers with their regional style parathas
+and it won't cost the owner of the "Paratha Stalls" a lot in delivering these parathas
+to Delhi and Punjab. 
+
+
+
+Factory Method Pattern:
+
+The Factory method pattern defines an interface for creating an object, but lets subclasses decide which class to
+instantiate.
+Factory method lets a class defer instantiation to subclasses.
+It promotes the loose-coupling by eliminating the need to bind application-specific classes into the code. That
+means the code interacts solely with the resultant interface or abstract class, so that it will work with any classes
+that implement that interface or that extends that abstract class.
+
+Usage of Factory Design Pattern:
+
+=> When a class doesn't know what sub-classes will be required to create
+=> When a class wants that its subclasses specify the objects to be created.
+=> When the parent classes choose the creation of objects to its subclasses.
+
+
+
+
+EXPLANATION:
+If we used Simple Factory Method Pattern to solve this problem, it would not have been very 
+sufficient.
+In this method, we would their would have been a single stall which would prepare the parathas,
+and then supply it to the three paratha stalls, namely, "Paratha Stalls", "Punjabi Paratha Stall"
+and "Delhi Paratha Stall". But if in future, the owner wanted to extend his business futher in 
+other cities, it would cost him much more than the profit he would earn.
+Hence, by using Factory Method Pattern, we would make the preparation of the parathas happen in
+the "Paratha Stalls" itself and also allow other branches to prepare parathas in their own stalls as
+well, hence cutting the transportation and other costs of the owner.
+Also, if the owner would like to extend his business in other cities, he would do it easily by 
+allowing them to prepare parathas in their regional style as well.
+So, it would not require for us, as programmers to create new methods every time we created a new
+class extending the Paratha Stalls since Paratha Stalls will be an abstract class and the preparation
+of parathas would become mandatory in the new extended class. 
